@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="top-bar">
-			<div class="top-bar-content">
+			<div class="top-bar-content top-bar-fixed">
 				<div class="title">
 					<a href="/"
 						><h1>a<span>e</span>v<span>a</span>nj<span>o</span>sh.</h1></a
@@ -24,7 +24,38 @@
 						{%- endfor -%}
 					</ul>
 				</div>
+				<div class="hamburger" onClick="openMobileNav(this)">
+					<svg
+						fill="rgb(47, 47, 47)"
+						width="28px"
+						height="28px"
+						viewBox="0 0 1920 1920"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<path
+								d="M1920 1411.412v225.882H0v-225.882h1920Zm0-564.706v225.882H0V846.706h1920ZM1920 282v225.882H0V282h1920Z"
+								fill-rule="evenodd"
+							></path>
+						</g>
+					</svg>
+				</div>
 			</div>
+		</div>
+		<div id="nav" style="display: none">
+			<ul class="mobile-nav">
+				{%- for link in navlinks -%}
+				<li>
+					<a href="{{ link.link }}">{{ link.label }}</a>
+				</li>
+				{%- endfor -%}
+			</ul>
 		</div>
 		<div class="content">
 			<div class="hero-container" data-aos="fade-down">
@@ -315,6 +346,21 @@
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
 			AOS.init();
+
+			var nav = document.getElementById('nav');
+
+			function openMobileNav() {
+				var topBar = document.getElementsByClassName('top-bar');
+				if (nav.style.display === 'block') {
+					nav.style.display = 'none';
+				} else {
+					nav.style.display = 'block';
+				}
+			}
+
+			document.addEventListener('scroll', function (e) {
+				nav.style.display = 'none';
+			});
 		</script>
 	</body>
 </html>
