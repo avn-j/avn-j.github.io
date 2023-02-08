@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../main.css" />
+		<link rel="stylesheet" href="../project.css" />
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		<div class="top-bar">
+			<div class="top-bar-content">
+				<div class="title">
+					<a href="/"
+						><h1>a<span>e</span>v<span>a</span>nj<span>o</span>sh.</h1></a
+					>
+				</div>
+				<div class="nav">
+					<ul>
+						{%- for link in navlinks -%}
+						<li>
+							<a href="{{ link.link }}">{{ link.label }}</a>
+						</li>
+						{%- endfor -%}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div
+			class="project-content"
+			style="background-color: {{ backgroundColor }}; color: white"
+		>
+			<div class="background">
+				<div class="project-title">
+					<h1>{{ project }}</h1>
+				</div>
+				<div class="project-description">
+					<p>{{ projectDescription }}</p>
+				</div>
+				<img class="hero-banner" src="../{{ heroBanner }}" />
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="details">
+				<h3>TECHNOLOGY</h3>
+				<ul class="tech-list">
+					{%- for tech in technology -%}
+					<li>
+						{{ tech }}
+					</li>
+					{%- endfor -%}
+				</ul>
+				{%- if projectLink -%}
+				<a href="{{ projectLink }}" target="_blank">{{ project }}</a>
+				{%- endif -%}
+			</div>
+			<div class="section">
+				<h2>Overview</h2>
+				<p>{{ firstSection | safe }}</p>
+			</div>
+			<div class="image-section">
+				<img src="../{{ firstImg }}" />
+			</div>
+			{%- if secondImg -%}
+			<div class="image-section">
+				<img src="../{{ secondImg }}" />
+			</div>
+			{%- endif -%}
+			<div class="section">
+				<h2>What I Learnt</h2>
+				<p>{{ secondSection | safe }}</p>
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;600&display=swap');
+</style>

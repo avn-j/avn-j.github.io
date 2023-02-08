@@ -1,0 +1,20 @@
+---
+data: navlinks
+---
+
+<div class="top-bar">
+	<div class="top-bar-content">
+		<div class="title">
+			<a href="/"><h1>a<span>e</span>v<span>a</span>nj<span>o</span>sh.</h1></a>
+		</div>
+		<div class="nav">
+			<ul>
+				{%- for link in navlinks -%}
+				<li>
+					<a href="{{ link.link }}">{{ link.label }}</a>
+				</li>
+				{%- endfor -%}
+			</ul>
+		</div>
+	</div>
+</div>

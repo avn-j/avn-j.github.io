@@ -1,0 +1,14 @@
+[
+	{
+		"label": "HOME",
+		"link": "/"
+	},
+	{
+		"label": "PROJECTS",
+		"link": "/#projects"
+	},
+	{
+		"label": "CONTACTS",
+		"link": "/"
+	}
+]
