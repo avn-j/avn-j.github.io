@@ -361,26 +361,23 @@ button:hover {
 	position: relative;
 }
 
-.mobile-nav {
+#nav {
 	position: fixed;
-	width: 100%;
+	width: 65%;
+	height: 100%;
+	right: -70%;
+	top: 0;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	background-color: var(--bg-color);
-	list-style: none;
+	background-color: white;
 	z-index: 1;
 }
 
-/* .mobile-nav::after {
-	content: '';
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.253);
-	left: 0;
-	top: 305px;
-} */
+.mobile-nav {
+	padding-top: 2rem;
+	list-style: none;
+}
 
 .mobile-nav li a {
 	font-family: 'Lato', sans-serif;
@@ -391,6 +388,26 @@ button:hover {
 
 .mobile-nav li {
 	padding: 1.5rem 0;
+}
+
+.slide-in {
+	transform: translateX(-105%);
+	transition: 1s;
+}
+
+.slide-out {
+	transform: translateX(105%);
+	transition: 1s;
+}
+
+.close-nav {
+	text-align: right;
+	padding-top: 1.85rem;
+	padding-right: 2rem;
+}
+
+.hamburger {
+	display: none;
 }
 
 @media screen and (max-width: 1300px) {
@@ -614,5 +631,9 @@ button:hover {
 
 	.job-container h5 {
 		font-size: 1rem;
+	}
+
+	.hamburger {
+		display: block;
 	}
 }
