@@ -38,10 +38,12 @@
 
 .section {
 	max-width: 55vw;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 .section p {
+	color: var(--neutral);
+	font-family: 'Inter', sans-serif;
 	margin-bottom: 2rem;
 	line-height: 2;
 }
@@ -95,7 +97,7 @@
 	}
 
 	.project-description p {
-		font-size: 1.5rem;
+		font-size: 1rem;
 		max-width: 90vw;
 	}
 
@@ -120,6 +122,10 @@
 @media screen and (max-width: 768px) {
 	.section {
 		font-size: 1.15rem;
+	}
+
+	.section p {
+		font-size: 1rem;
 	}
 
 	.details h3 {
