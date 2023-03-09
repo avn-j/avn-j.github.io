@@ -240,7 +240,7 @@ button:hover {
 	margin-top: 1rem;
 	padding: 0.55rem;
 	letter-spacing: 0.15rem;
-	color: var(--base);
+	background-color: var(--bg-color);
 	transition: 0.2s linear;
 }
 
