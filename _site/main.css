@@ -250,6 +250,22 @@ button:hover {
 	border-color: var(--accent);
 }
 
+.button-container {
+	display: flex;
+}
+
+.button-container a {
+	margin-right: 0.5rem;
+}
+
+a:visited button {
+	color: black;
+}
+
+a button {
+	color: black;
+}
+
 .about-me-container {
 	margin-top: 2.5rem;
 }

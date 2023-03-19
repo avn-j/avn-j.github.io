@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../main.css" />
-		<link rel="stylesheet" href="../project.css" />
+		<link rel="stylesheet" href="../../main.css" />
+		<link rel="stylesheet" href="../../project.css" />
 		<title>Aevan Josh | {{ title }}</title>
 	</head>
 	<body>
@@ -37,7 +37,7 @@
 				<div class="project-description">
 					<p>{{ projectDescription }}</p>
 				</div>
-				<img class="hero-banner" src="../{{ heroBanner }}" />
+				<img class="hero-banner" src="../../{{ heroBanner }}" />
 			</div>
 		</div>
 		<div class="project-content">
@@ -59,11 +59,11 @@
 				<p>{{ firstSection | safe }}</p>
 			</div>
 			<div class="image-section">
-				<img src="../{{ firstImg }}" />
+				<img src="../../{{ firstImg }}" />
 			</div>
 			{%- if secondImg -%}
 			<div class="image-section">
-				<img src="../{{ secondImg }}" />
+				<img src="../../{{ secondImg }}" />
 			</div>
 			{%- endif -%}
 			<div class="section">
