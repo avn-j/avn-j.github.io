@@ -50,13 +50,14 @@
 
 .section li {
 	font-family: 'Inter', sans-serif;
-	font-size: 1.2rem;
+	font-size: 1.25rem;
 	color: var(--neutral);
 	padding: 0.75rem 0;
 }
 
 .section ul {
 	padding-left: 2rem;
+	line-height: 2;
 	padding-bottom: 2rem;
 }
 
@@ -109,7 +110,7 @@
 	}
 
 	.project-description p {
-		font-size: 1rem;
+		font-size: 1.25rem;
 		max-width: 90vw;
 	}
 
@@ -137,6 +138,10 @@
 	}
 
 	.section p {
+		font-size: 1rem;
+	}
+
+	.section li {
 		font-size: 1rem;
 	}
 
