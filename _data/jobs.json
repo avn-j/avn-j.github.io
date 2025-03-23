@@ -1,10 +1,17 @@
 [
 	{
+		"title": "APS6 I.T Application Developer",
+		"company": "Australian Taxation Office",
+		"time": "Feb 2024",
+		"description": "A role as an Application Developer building and developing automation solutions for key business areas and stakeholders. Leading projects through designing UI interfances in Figma and developing Sharepoint web applications using AngularJS.",
+		"duration": 0
+	},
+	{
 		"title": "APS5 I.T Midrange Developer",
 		"company": "Australian Taxation Office",
 		"time": "March 2023",
 		"description": "A role as an Application Developer in an agile team to deliver end-to-end solutions for our bulk data exchange platform to integrate with external services. From solution design to implementation and to database configuration.",
-		"duration": 0.2
+		"duration": 2
 	},
 	{
 		"title": "APS4 I.T Systems Analyst",

@@ -172,18 +172,19 @@ button:hover {
 .project {
 	margin: 10rem 0;
 	color: var(--base);
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 4rem;
 	padding: 0 4rem;
 }
 
-.project:nth-child(even) .project-image {
+/* .project:nth-child(even) .project-image {
 	margin-right: 3rem;
 }
 
 .project:nth-child(odd) .project-image {
 	margin-left: 3rem;
-}
+} */
 
 .project-image {
 	flex: 1;

@@ -1,0 +1,62 @@
+---
+layout: project-page-layout.njk
+title: 'Cinehives'
+project: CINEHIVES
+projectDescription: Social community-based platform for film, TV and anime enthusiasts
+heroBanner: cinehives-1.png
+backgroundColor: '#222'
+technology: ['NextJS', 'TailwindCSS', 'PostgreSQL', 'Vercel', 'Supabase', 'MovieDB API', 'Prisma ORM']
+firstSection: '
+<p>
+<b>Note: Project is a work in progress and is not yet optimized for mobile.</b><br /><br />
+Cinehives is a passion project built on <b>Next.js</b>. The idea of this project is inspired by Letterboxd but designed to include all types of media: films, TV shows and anime.
+A key feature of Cinehives is the ability to create and join "hives", which are groups created by users based on shared interests. (eg. <i>Christopher Nolan fans</i>)
+<br /><br /> 
+The web application is powered by <b>Next.js</b> for both the front-end and the back-end, while <b>Supabase</b> handles authentication, database, and storage (buckets). <b>Prisma</b> is integrated as the database ORM, and <b>MovieDB API</b>
+is used for fetching media data. Working on this project has strengthened my expertise in full-stack development and enhanced my ability to incorporate databases and
+other services into web applications. This has deepend my proficiency with Next JS.
+</p>
+<p>Current features of the application:</p>
+<ul>
+  <li>User authentication and registration, including profile setup with profile picture upload and an onboarding process for new users.</li>
+  <li>Search and browse films and TV shows, with detailed information such as cast, release date, episodes, and seasons.</li>
+  <li>Like, rate, review, and log films and TV shows.</li>
+  <li>View, like, and comment on user reviews.</li>
+  <li>Explore user profiles to see their watch history, logged content, and recent activity, including reviews and ratings.</li>
+</ul>
+
+</p>'
+secondImg: cinehives-3.png
+secondSection: '
+<p>
+Working on this project presented numerous challenges from both a front-end and back-end perspective. It was my first time tackling a project of this size and implementing user authentication, databases, and integrating various third-party services.
+It taught me how to design a database that efficiently accommodates relationships between data and users. This experience was invaluable in understanding the complexities of full-stack development and the importance of writing scalable, 
+maintainable code. 
+</p>
+<p>
+Using TailwindCSS and ShadCN components made building a beautiful interface much more efficient. Additionally, using an ORM simplified database manipulation, making it easier to work with Postgres. 
+Leveraging my prior React skills to build the application was a great experience, and Next.js made handling server-side code much simpler with server actions.
+</p>
+<p>Two major challenges arose during the development of this project:</p>
+<p>
+<b>Problem 1: The MovieDB API has endpoints that allow you to fetch top films, hich was straightforward to implement by displaying the API response in a grid layout.
+But how about being able to display recent activity of users? Showing what films have been recently reviewed or rated.</b>
+</p>
+<p>
+Initially, I thought a simple solution would be to store the MovieDB film ID in the database whenever a user interacted with a film (e.g., log, rate, like, or review). This would link the film''s API ID to the activity and 
+allow me to fetch the data each time the user interacted with the film. However, I quickly realized this wasn''t an optimal approach, as it would require multiple API calls for each film displayed, negatively affecting performance.
+<p>
+<p>
+After reevaluating, I focused on what the user truly needed: the film title and poster. I revised the solution to store the API ID, title, and poster URL whenever a user interacted with a film. This allowed me to eliminate any API calls until the user clicked on a film to view its details.
+</p>
+<p><b>Problem 2: The MovieDB API serves data for both films and TV shows, but stores them separately. The issue arose because the API ID is not unique across films and TV shows, meaning a film and a TV show could share the same ID.</b></p>
+<p>
+This became a problem when, while browsing a TV show, I discovered that reviews and ratings for a specific movie were being displayed incorrectly and were displaying reviews for a TV show. Since this issue emerged later in development, I had to redesign my database schema. 
+The solution was to store the media type (film or TV show) in the database along with the API ID. I then created separate functions for films and TV shows to call the MovieDB API and append the media type to the response. 
+As a result, I could no longer use the MovieDB API ID directly as the primary key instead I created my own ID to act as a foreign key for my other data relations.
+</p>
+<p>This experience was invaluable in understanding the complexities of full-stack development and the importance of writing scalable, maintainable code especially for an application at this scale.
+</p>
+'
+firstImg: cinehives-2.png
+---
