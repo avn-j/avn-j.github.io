@@ -207,6 +207,8 @@ button:hover {
 .project-tags {
 	margin-top: 1rem;
 	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 	list-style: none;
 }
 
@@ -216,7 +218,6 @@ button:hover {
 	padding: 0.25rem 0.5rem;
 	font-size: 0.75rem;
 	color: var(--accent);
-	margin-right: 0.5rem;
 	border-radius: 3px;
 }
 
@@ -490,14 +491,6 @@ a button {
 		border-bottom: 1px solid rgb(218, 218, 218);
 	}
 
-	.project:nth-child(even) .project-image {
-		margin-right: 0;
-	}
-
-	.project:nth-child(odd) .project-image {
-		margin-left: 0;
-	}
-
 	.project:nth-child(odd) {
 		flex-direction: column-reverse;
 	}
@@ -554,6 +547,25 @@ a button {
 	.job-container p {
 		float: left;
 	}
+
+	.project-image {
+		order: 1;
+	}
+
+	.project-details {
+		order: 2;
+	}
+
+	.project:nth-child(odd) {
+		flex-direction: column;
+	}
+
+	.project-tags {
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -608,6 +620,7 @@ a button {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 0;
 	}
 
 	.project-header h3 {
@@ -616,7 +629,7 @@ a button {
 	}
 
 	.project-header {
-		text-align: center;
+		text-align: left;
 	}
 
 	.project-tags p {
@@ -625,6 +638,13 @@ a button {
 
 	.project-tags {
 		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.project-tags li {
+		margin-right: 0;
 	}
 
 	.projects-title {
@@ -652,5 +672,21 @@ a button {
 
 	.hamburger {
 		display: block;
+	}
+
+	.project {
+		padding: 1rem;
+	}
+
+	.project-image {
+		order: 1;
+	}
+
+	.project-details {
+		order: 2;
+	}
+
+	.project:nth-child(odd) {
+		flex-direction: column;
 	}
 }
